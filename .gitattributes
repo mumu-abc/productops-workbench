@@ -1,0 +1,11 @@
+# 统一换行符：仓库里一律 LF，检出到 Windows 时也不自动转 CRLF。
+# 不这么做的话，git 会在 Windows 上把 LF 转成 CRLF，
+# 于是同一份文件在 Linux CI 和本机上算出不同的 blob，
+# 「我只改了一行」的 diff 会变成整个文件重写。
+* text=auto eol=lf
+
+# 这些是二进制/生成物，不要做换行转换
+*.png binary
+*.jpg binary
+*.db binary
+*.html linguist-generated=false

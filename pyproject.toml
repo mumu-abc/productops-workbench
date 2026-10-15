@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "productops-workbench"
+version = "1.0.0"
+description = "AI 产品运营工作台 —— 评测 / 反馈闭环 / 数据看板三合一，把用户吐槽变成回归测试用例"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+keywords = ["ai", "product-ops", "evaluation", "llm", "feedback-loop", "analytics"]
+dependencies = []            # 刻意零第三方依赖：任何人 clone 下来就能跑
+
+[project.scripts]
+productops = "productops.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/mumu-abc"
+
+[tool.setuptools.packages.find]
+include = ["productops*"]
+
+[tool.setuptools.package-data]
+productops = ["web/*", "web/**/*", "sql/*"]

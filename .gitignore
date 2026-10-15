@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# 运行时数据（PO_HOME 默认就是 ./data）
+data/
+*.db
+*.db-journal
+
+# 我的本地验证目录（不属于交付物）
+_smoke/
+_e2e/
+_fresh/
+_shots/
+
+# 环境变量（含 API Key，绝不提交）
+.env
+
+# 编辑器
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

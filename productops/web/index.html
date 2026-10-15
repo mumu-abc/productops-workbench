@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ProductOps Workbench · AI 产品运营工作台</title>
+<link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+
+<div class="app">
+
+  <!-- ============ 侧栏 ============ -->
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brand-mark">PO</div>
+      <div class="brand-text">
+        <strong>ProductOps</strong>
+        <span>AI 产品运营工作台</span>
+      </div>
+    </div>
+
+    <nav class="nav" id="nav">
+      <a href="#/overview"   data-view="overview">  <i>◎</i><span>总览</span></a>
+      <a href="#/evaluation" data-view="evaluation"><i>✓</i><span>效果评测</span></a>
+      <a href="#/feedback"   data-view="feedback">  <i>⟳</i><span>反馈闭环</span></a>
+      <a href="#/analytics"  data-view="analytics"> <i>▤</i><span>数据看板</span></a>
+      <a href="#/bridge"     data-view="bridge">    <i>⇄</i><span>Bridge 联动</span></a>
+    </nav>
+
+    <div class="side-foot">
+      <div class="tiny" id="sideMode">—</div>
+      <div class="tiny" id="sideDb">—</div>
+      <div class="tiny" id="sideVer">—</div>
+    </div>
+  </aside>
+
+  <!-- ============ 主区 ============ -->
+  <main class="main">
+    <header class="topbar">
+      <div>
+        <h1 id="pageTitle">总览</h1>
+        <p class="sub" id="pageSub">评测 / 反馈 / 数据三件事，一个库、一条命令</p>
+      </div>
+      <div class="topbar-actions" id="topActions"></div>
+    </header>
+
+    <div id="view" class="view">
+      <div class="loading">加载中…</div>
+    </div>
+  </main>
+
+</div>
+
+<div id="toast" class="toast"></div>
+
+<script src="/static/app.js"></script>
+</body>
+</html>
